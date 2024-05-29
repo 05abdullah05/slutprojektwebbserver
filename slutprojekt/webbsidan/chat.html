@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Chatting</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+    <header>
+        <div class="profile-icon" id="profile-icon"></div>
+        <!-- <a href="/logout">Logout</a> -->
+        <!-- log ut button -->
+    </header>
+    <div class="container">
+        <div class="chat-header">
+            <!-- <h1>Chat Room</h1> -->
+            <div class="profile-link">
+                <a href="/profile">Profile</a>
+            </div>
+        </div>
+        <br>
+        <div class="jumbotron">
+            <h1 class="display-4">Chat with others online!</h1>
+            <br>
+            <!-- Display the user's name on top -->
+            <h3 id="name"></h3>
+            <br>
+            <!-- Input field for the message -->
+            <textarea id="message" class="form-control" placeholder="Write something here..."></textarea>
+            <br>
+            <!-- Button to send the message -->
+            <button id="send" class="btn btn-success">Send</button>
+        </div>
+        <!-- Container to display messages -->
+        <div id="messages"></div>
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/chat.js"></script>
+    
+</body>
+</html>
+
